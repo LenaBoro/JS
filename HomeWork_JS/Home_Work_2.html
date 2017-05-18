@@ -23,7 +23,7 @@
 	var XY;
 	var XZ;
 	var YZ;
-	var a,b,c; 
+	
 	
 	XY=Math.sqrt(Math.pow((x_y-x_x),2) + Math.pow((y_y-y_x),2));
 	
@@ -31,7 +31,7 @@
 	
 	YZ=Math.sqrt(Math.pow((x_z-x_y),2) + Math.pow((y_z-y_y),2));
 	
-	if (YZ == XY+XY )
+	if (YZ == XY+XY)
 	{document.write('прямогульный');}
 	
 	else{document.write('false');}	
