@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>H_W_7.1</title>		
+	</head>
+	<body>
+	<script type="text/javascript" src="plotly-latest.min.js"></script>
+				<div id="placeholder"style="widht:480px;height:400px;"></div>
+			<script>
+	//Задача 1.Подключить стороннюю библиотеку для построения графиков.
+
+	 var line={
+	 x:[],
+	 y:[],
+	
+	}
+	
+	function schedule(x){
+	if (x>=1){
+	return y= 5/x;}
+	else {
+	return y=x*x-4*x;}
+	}
+	
+	for (var i=-5; i<=5;i+=0.01){
+	line.x.push(i);
+	line.y.push(schedule(i));
+	}
+	
+	var data=[line];
+		Plotly.newPlot("placeholder",data);
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			</script>
+</body>
+</html>

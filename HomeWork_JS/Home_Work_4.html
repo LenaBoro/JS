@@ -21,14 +21,14 @@
 		if (i%2 === 0){
 			area[i] = "X";}
 		else 
-		{area[i] = "O";}
+			{area[i] = "O";}
 	}
 	
 	document.write("<table border=\"2\" cellspacing=\"0\" cellpadding=\"10\">");
 		
 		document.write("<tr>");
 		for(var i=0; i<3 ;i++){
-			document.write("<td>" + area[i] + "</td>");}
+			document.write("<td>" + area[i+1] + "</td>");}
 		document.write("</tr>");
 		
 		document.write("<tr>");
@@ -38,7 +38,7 @@
 		
 		document.write("<tr>");
 		for(var i=0; i<3; i++){
-			document.write("<td>"+ area[i]+"</td>");}
+			document.write("<td>"+ area[i+3]+"</td>");}
 		document.write("</tr>");
 	
 	document.write("</table>");
