@@ -25,18 +25,17 @@
 		interests:["flies","Water lilies","Mosquitoes","Toads"] -->
 				<script>
 		function Human(){
-			this.name = "name";
-			this.lastname = "lastname";
+			this.name = "Frog";
+			this.lastname = "Bof";
 			this.age = 20;
-			this.sex = "sex";
-			this.interest = "interest";
+			this.sex = "men";
+			this.interest = ["flies","Water lilies","Mosquitoes","Toads"];
 		}
 		function Student(){
 		Human.apply(this);
-		//добавить универ
 		}
-		
 	var student=new Student();
+	student.institute="Обучается в ИТМО"	
 	console.log(student);
 						
 				</script>
