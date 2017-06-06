@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>h_w_10 task03</title>
+	</head>
+	<body>
+		<script>
+		//шаблон пользователя
+		function Users(){
+			this.toString = function(){
+				return "none";
+			}
+		}
+		//factory
+	Users.user = function(str){
+		var users = new Users();
+		users.name = str.name; 
+		users.toString = function(){
+			return "Name user 2 " + this.name;
+			}
+		return users;
+		}
+		//
+		var user = Users.user('Lili n');
+		console.log(user.toString());		
+	
+		var users = new Users();
+		console.log(users.toString());	
+		</script>
+		
+		</body>
+</html>

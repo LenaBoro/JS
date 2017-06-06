@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>h_w_8 task02</title>
+	
+
+<!-- 	2. Создать объект «Товар» включающий:
+	- свойства, такие как фото, артикул, описание и т.п.;
+	- метод, которому при вызове передается id пустого div элемента и в этот html элемент данный метод создаст и внесёт все необходимые html элементы,
+	стили, и содержание для отображения всей информации хранящихся в свойствах объекта о данном товаре. 
+	Дизайн оформления информации в html о товаре – это ваше творчество. -->
+	</head>
+		<body>
+		<div id="container" style="width:300px; height:900px; border:1px solid pink;text-align:center;"></div>
+		<script>
+		
+		//cоздаем объект товар
+		var tovar={
+		name:"16/17 NOMAD 105",
+		discr:"The Nomad 105 is Icelantic’s flagship model,\n best-selling ski and the foundation of the Nomad Freeride Collection.Go ahead, see what everyone has been talking about and get on a pair!",
+		//создали img, добавили фото = метод объекта
+		foto: function(){
+			var image = document.createElement('img');
+			var container=document.getElementById('container');
+				container.append(image);
+				image.src="ski.jpg"; 
+				image.style.width="300px";
+				image.style.heigth="300px";
+			}
+			}
+			//отображаем свойства объекта 
+		for(var key in tovar){
+		document.write(key+":" + tovar[key]+".")}
+	//вызов методa foto
+		tovar.foto();
+		</script>
+		</body>
+</html>

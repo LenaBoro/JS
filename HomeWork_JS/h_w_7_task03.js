@@ -11,9 +11,11 @@
 			return max;
 			}
 		}
-}()); 
+}());
+ 
 	//наименьшее число в массиве
-;(function(){
+/*
+	;(function(){
 	window.mylib = {
 		findMin:function(arr){
 			var min = arr[0];
@@ -26,9 +28,9 @@
 			}
 		}
 }());
-
+*/
 		// расчет среднего арифметического
-;(function(){		
+/*;(function(){		
 		window.mylib = {
 		Calc_arith_mean:function(arr){ 
 			var res=0;
@@ -52,4 +54,4 @@
 				return arr1;
 			}
 	}()); 
-
+*/

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>h_w_9_task02</title>
+		<style>
+		button{
+			width:50px;
+			height:20px;
+			color:purple;
+		}
+		
+		
+		</style>
+	</head>
+<!-- Реализовать счётчик нажатий на кнопку: Дана кнопка внутри неё записана цифра. 
+	При клике на кнопку – её значение должно увеличиваться на единицу. -->
+			<body>
+				
+				<button id="button_1">0</button>	
+				<script>
+				
+				var button=document.getElementById('button_1');
+				var i=0;
+					button.onclick = function clickByclick(e){
+						if(document.onclick = button){
+							i++;
+							button.innerHTML = i;
+							button.style.color="purple";
+						}
+					}
+				
+				</script>
+			</body>
+
+</html>

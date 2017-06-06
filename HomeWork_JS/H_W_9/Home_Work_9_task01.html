@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>h_w_9 task01</title>
+	
+		<script src="h_w_9_task01.js"></script>
+		<style>
+			#f,#s,#t{
+				width:400px;
+				height:100px;}
+			#f{
+			background-color:grey;}
+			
+			#s{
+				background-color:yellow;
+			}
+			#t{
+				background-color:green;
+			}
+		</style>
+		<script>
+	//функция для 1 блока
+		var flag=true;
+		function change(){
+			
+			if (flag == true)
+			{ f.style.backgroundColor="red"; 
+			flag=false;
+			
+			}else{
+			f.style.backgroundColor="green";
+			flag=true;
+			}	
+		}
+	//функция для 2 блока
+			var flag=true;
+		function change_2(){
+			
+			if (flag == true)
+			{ s.style.backgroundColor="yellow"; 
+			flag=false;
+			
+			}else{
+			s.style.backgroundColor="aqua";
+			flag=true;
+			}	
+		}
+		//функция для 3 блока
+			var flag=true;
+		function change_3(){
+			
+			if (flag == true)
+			{ t.style.backgroundColor="blue"; 
+			flag=false;
+			
+			}else{
+			t.style.backgroundColor="purple";
+			flag=true;
+			}	
+		}
+
+
+		
+		</script>
+		</head>
+		<body>
+	
+		<div id="f" onclick="change()"></div>
+		<div id="s" onclick="change_2()"></div>
+		<div id="t" onclick="change_3()"></div>
+		
+		</body>
+</html>
+<html>
+<head>
+	
