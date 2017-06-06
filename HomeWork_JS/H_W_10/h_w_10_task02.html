@@ -31,13 +31,25 @@
 			this.sex = "men";
 			this.interest = ["flies","Water lilies","Mosquitoes","Toads"];
 		}
+		
 		function Student(){
-		Human.apply(this);
-		}
-	var student=new Student();
-	student.institute="Обучается в ИТМО"	
-	console.log(student);
-						
+			Human.apply(this);
+			}
+	
+	
+	var student=new Student()
+	//добавляем свойство институт
+		student.institute="Обучается в ИТМО"
+	
+	function print(){
+		console.log(this.name + " " + this.lastname + ". " + this.age +". "+ "Interests:"+this.interest + "." + this.institute);	
+	}
+	student.print = print;
+	student.print()
+	
+
+	//преобразовать в строчку свойства студента
+	
 				</script>
 	</body>
 </html>
