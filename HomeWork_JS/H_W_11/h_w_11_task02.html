@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> h_w_11 task01</title>
+	</head>
+		<body>
+<!--  Используя смешанное наследование:
+Создать шаблон объектов «Человек».
+Свойства «Имя», «Возраст», «Пол», «Интересы».
+Метод преобразования к строке вида: «Человек: 
+Иван. Возраст: 25 лет. Пол: м. Интересы: 
+музыка, программирование.»
+Создать шаблон объектов «Студент».
+Свойства от наследованные от шаблона объектов 
+«Человек» и добавить «Институт».
+Переопределить метод преобразования к строке вида: 
+«Студент: Иван. Возраст: 25 лет. Пол: м. Интересы: 
+музыка, программирование. Обучается в ИТМО.»	 -->	
+				<script>
+	function Human(name,lastname,age,sex,interest){
+				this.name = "Frog";
+				this.lastname = "Bof";
+				this.age = 20;
+				this.sex = "men";
+				this.interest = ["flies","Water lilies","Mosquitoes","Toads"];
+			};
+	Human.prototype.toString=function(){
+		return this.name + " " + this.lastname + ". " + this.age +". "+ "Interests:"+this.interest + "." + this.institute;}
+			
+	function Student(name,lastname,age,sex,interest,institute){
+		Human.call(this,name,lastname,age,sex,interest);
+		this.institute="Обучается в ИТМО";
+	};
+		Student.prototype._proto_=Student.prototype;
+			var student= new Student()
+		
+			
+				</script>
+	</body>
+</html>
