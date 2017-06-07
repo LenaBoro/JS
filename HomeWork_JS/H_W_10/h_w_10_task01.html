@@ -5,10 +5,43 @@
 	<title>h_w_10 task01</title>
 	</head>
 		<body>
+		<!-- 1. Создать шаблон объектов «Товар».
+Свойства товара «Имя» и «Цена».
+Создать шаблон объектов «Корзина товаров». 
+Приватные свойства объекта:
+- Массив товаров;
+- Количество товаров;
+- Сумма товаров.
+Методы объекта:
+- Добавить товар;
+- Вернуть сумму товара;
+- Вернуть количество товара. -->
 		<div id="container"></div>
 		<script>
-		
-		
+	//шаблон товара
+	function Tovar(name,price){
+		this.name=name;
+		this.price=price;
+	}
+	function BasketTovar(){
+		//приватные переменные 
+		var arrTovar =[];
+		var price=0;
+		var count=0;
+	 this.addTovar=function(){
+			arrTovar.push(this.name)//добавление товара
+			count++;//кол-во товара
+			price+=this.price;//сумма товара
+		}
+	}
+	var tovar = new Tovar("ski",200);
+		console.log(tovar);
+	var basket = new BasketTovar();
+	var addTovar = basket.addTovar;
+	
+	console.log(addTovar);
+
+	
 		</script>
 		</body>
 </html>
