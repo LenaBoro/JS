@@ -4,10 +4,58 @@
 		<meta charset="utf-8">
 		<title> h_w_11 task01</title>
 	</head>
-		<body>			
-				<script>
-
+		<body>	
+<!-- 1. Используя прототипы:
+Создать шаблон объектов «Товар».
+Свойства товара «Имя» и «Цена».
+Создать шаблон объектов «Корзина товаров». 
+Cвойства объекта:
+- Массив товаров;
+- Количество товаров;
+- Сумма товаров.
+Методы объекта:
+- Добавить товар;
+- Вернуть сумму товара;
+- Вернуть количество товара. -->
+	<script>
+	//конструктор товара
+		function Tovar(name,price){
+			this.name = name;
+			this.price = price;
+		};
+	
+		//конструктор корзины
+		function Basket(){
+			this.arr=[];
+			this.count=0;
+		}
+		Basket.prototype.addTovar = function(){
+			this.arr.push(Tovar);
+			this.count ++;
+			this.price+=this.price;
+			}
+		var tovar = new Tovar("ski",200);
+		var tovar_1 = new Tovar("skis",200);
+		//console.log(tovar);
+		//console.log(tovar_1);
+		var basket = new Basket();
+		
+			basket.addTovar();
+			basket.addTovar();
+			console.log(basket);	
+		
 			
+		//добавление имя товара в массив
+		/*get this.arr(){
+			return this.arr.push(this.name);
+			
+			}*/
+		//добавление количества товаров
+	/*this.count=count;
+		get this.count(){
+			return this.count++;
+			
+		*/
 	</script>
 	</body>
 </html>

@@ -19,22 +19,25 @@
 музыка, программирование. Обучается в ИТМО.»	 -->	
 				<script>
 	function Human(name,lastname,age,sex,interest){
-				this.name = "Frog";
-				this.lastname = "Bof";
-				this.age = 20;
-				this.sex = "men";
-				this.interest = ["flies","Water lilies","Mosquitoes","Toads"];
-			};
+				this.name = name;
+				this.lastname = lastname;
+				this.age = age;
+				this.sex = sex;
+				this.interest = [];
+	};
 	Human.prototype.toString=function(){
-		return this.name + " " + this.lastname + ". " + this.age +". "+ "Interests:"+this.interest + "." + this.institute;}
+		return this.name + " " + this.lastname + ". " + this.age +". "+ "Interests:"+this.interest + ".";
+	};
 			
 	function Student(name,lastname,age,sex,interest,institute){
 		Human.call(this,name,lastname,age,sex,interest);
-		this.institute="Обучается в ИТМО";
+		this.institute = institute;
 	};
-		Student.prototype._proto_=Student.prototype;
-			var student= new Student()
 		
+	Student.prototype._proto_=Student.prototype;
+	var student = new Student("Frog","Bog",20,"men",["Fly","Mosquitoes"],"Обучается в ИТМО");
+	
+	console.log("Студент" + student);
 			
 				</script>
 	</body>
