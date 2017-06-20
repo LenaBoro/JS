@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Задача: функция pow(x, n) вычисляющая возведение числа x в степень n
+	function pow(x,n){
+		if( n === 1 ) {
+			return x;
+		} else {
+			return x*pow(x,n-1);
+		}
+	}
+	
+	console.log(pow(2,3));
+</script>
+</body>
+<footer></footer>
+</html>

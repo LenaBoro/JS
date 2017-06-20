@@ -33,10 +33,13 @@
 		Human.call(this,name,lastname,age,sex,interest);
 		this.institute = institute;
 	};
+	Student.prototype.toString=function(){
+		return this.institute; 
+	};
 		
-	Student.prototype._proto_=Student.prototype;
+	Student.prototype._proto_ = Human.prototype;
 	var student = new Student("Frog","Bog",20,"men",["Fly","Mosquitoes"],"Обучается в ИТМО");
-	
+
 	console.log("Студент" + student);
 			
 				</script>

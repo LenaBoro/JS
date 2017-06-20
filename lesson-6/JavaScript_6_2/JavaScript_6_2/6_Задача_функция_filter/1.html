@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Задача Функция filter
+	function checkNegative(num){
+		return num < 0 ? true : false;
+	}
+
+	function filter(mass, predicat){
+		var result = [];
+		for(var i = 0; i < mass.length; i++){
+			if(predicat(mass[i])){
+				result.push(mass[i]);
+			}
+		}
+		return result;
+	} 
+
+	console.log(filter([1,2,-3,-4,0,8,-9], checkNegative));
+</script>
+</body>
+<footer></footer>
+</html>

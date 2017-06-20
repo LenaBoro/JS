@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+	<body>
+			<input id="input"> </br>
+				<button id="button">Send</button>
+				<ul id="letter">
+				</ul>
+		<script>
+
+			button.addEventListener("click", function(){
+				var content = input.value;
+				var lilet = document.createElement('li');
+				lilet.innerText=content;
+				letter.append(lilet);
+				input.value= " ";
+					
+				});
+		</script>
+	</body>
+	<footer></footer>
+</html>
+

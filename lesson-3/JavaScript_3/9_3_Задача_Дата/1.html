@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Задача проверить дату по шаблону
+	var str = prompt("Введите дату в формате: XX.XX.XXXX","");
+	
+	var regExp =  /(0[1-9]|[1-2][0-9]|3[0-1])\.(0[1-9]|1[0-2])\.([0-9]{4})/;
+
+	if (regExp.test(str))
+	{
+		alert("Дата введена правильно!");
+	} else {
+		alert("Дата введена неправильно!");
+	}	
+</script>
+</body>
+<footer></footer>
+</html>

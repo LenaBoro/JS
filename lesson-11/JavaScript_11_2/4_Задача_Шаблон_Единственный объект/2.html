@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		//Задача Единственный объект вариант 2
+		function Storage(){
+			var instance = this;
+			
+			this.data = [];
+			this.set = function(key, value){
+				this.value[key] = value;
+			};
+			this.get = function(key){
+				return this.value[key];
+			};
+			
+			Storage = function(){
+				return instance;
+			}
+		}
+		
+		var store1 = new Storage();
+		var store2 = new Storage();
+		console.log(store1 === store2);
+	</script>
+</body>
+<footer></footer>
+</html>

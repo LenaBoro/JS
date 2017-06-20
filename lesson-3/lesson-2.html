@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>HomeWork-2</title>
+</head>
+<body>
+	<script>
+	//Задача-1--валидация номера------------------- 
+	/*
+	var x = prompt("Введите номер телефона: 7(ххх) ххх-хх-хх")
+	
+	var regexp = /\d\s\(\d\d\d\)\d\d\d\-\d\d\-\d\d/;
+	
+	if (regexp.test(x))
+	{alert('true');}
+	else{
+	alert('false');} 		
+	*/	
+	//	Задача 2-------------------
+	/*var x = prompt("Введите почту ")
+	var email = /[^а-я]{1,10}\@\w{2,5}\.\w{1,5}/;
+	
+	if (email.test(x))
+	{alert('true');}
+	else{alert('false')}
+	*/
+	
+	//задача 3---------------------
+
+/*  var x = prompt("Введите дату")
+	var date = /\d\d\.\d\d\.\d\d\d\d/;
+	
+	if (date.test(x))
+	{alert('true');}
+	
+	else{alert('false')}
+*/
+	
+	//Побитовые операторы. Шифруем данные 
+	var str = prompt("Введите строку");
+	var x = prompt("Введите символ кодирования");
+	var i = 0;
+	var newstr= " ";
+	while(str.length > i)
+	{var tempCode= str.charCodeAt(i)^x.charCodeAt(0);// меняем символы в слове-строке
+	newstr+= String.fromCharCode(tempCode);i++}
+	
+	console.log(newstr);		
+	</script>
+</body>
+</html>

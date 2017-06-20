@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	//Пример вывести таблицу зёброй
+	var tableHTML = "<table><tr><th>№</th><th>№*2</th></tr>";
+	
+	var i = 1;
+	while(i < 5) {
+		if(i%2){
+			tableHTML+='<tr style = "background-color:red;">';
+		} else {
+			tableHTML+='<tr style = "background-color:green;">';
+		}
+		tableHTML+="<td>" + i + "</td><td>" + (i*2) + "</td></tr>";
+		i++;
+	}
+		
+	tableHTML+="</table>";
+	document.write(tableHTML);
+	
+</script>
+</body>
+<footer></footer>
+</html>

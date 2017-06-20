@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Пример выход сразу из нескольких циклов
+	var a = [6, 74, 59, 152];
+	
+	out: for(;;){	
+		for(var i = 0, len = a.length; i < len; i++)
+		{
+			if(i == 2) break out;
+			console.log(a[i]);
+		}
+	}
+	console.log('Скрипт выполнен полностью!');
+</script>
+</body>
+<footer></footer>
+</html>

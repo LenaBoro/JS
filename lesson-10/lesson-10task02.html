@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>lesson-10</title>
+		
+	</head>
+			<body>
+			
+					<script>
+					// задача 3
+					function User(str){
+					if(str!==undefined && typeof str==="string"){
+					this.name=str;
+					}
+					else{this.name="anonim";}
+					this.toString = function(){
+					return "user name "+this.name
+					}
+					
+					}
+					
+					var user1=new U ser();
+					var user2=new User('Lena');
+					console.log(user1+"");
+					console.log(user2+"");
+					
+					</script>
+			</body>
+
+</html>

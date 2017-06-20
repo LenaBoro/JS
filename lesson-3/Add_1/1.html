@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Пример: Шифрование строки по ключу
+	
+	//Запрошиваем текст для шифрования
+	var text = prompt("Введите текст для шифрования:");
+	var secretText = ""; //Переменная для хранения защифрованного текста
+	//Запрашиваем ключ
+	var key = prompt("Введите ключ (один символ) для шифрования:");
+	//Код сивола ключа
+	var keyCode = key.charCodeAt(0);
+	
+	var i = 0; //Счётчик для перебоа сиволов текста
+	
+	while(i<text.length) {
+		//Получаем код символа обычного текст
+		var code = text.charCodeAt(i);
+		//Шифруем код с использованием ключа
+		code = code ^ keyCode;
+		secretText = secretText + String.fromCharCode(code);
+		i++;
+	}
+
+	//Выводим зашифрованный текст
+	alert(secretText);
+	console.log(secretText);
+</script>
+</body>
+<footer></footer>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src ="jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p>1</p>
+	<p id="p_fade">1</p>
+	<p>1</p>
+	<p>1</p>
+	<a id="a_1"href="#">up</a></br>
+	<a id="a_2"href="#">up slow</a>
+	
+	<div id="box" style="background-color:red;width:400px;height:100px;">
+	<button>button_1</button>
+	<button>button_2</button>
+	<button>button_3</button>
+	</div>
+	<div id="box1" style="background-color:green;width:100px;height:100px;"></div>
+	
+	<div id="container"style ="width:30px; heigth:40px;">
+		<p>PLink</p><a id="link_1" href="#">Link</a>
+	</div>
+	<div id="tenny" style="width:20px;height:40px;"></div>
+	
+	<script>
+		$("#a_1").click(function(e){
+			$(document).scrollTop(0);
+		return false;
+		});
+		//медленный подъем наверх
+		$("#a_2").click(function(e){
+			$(document.body).animate({scrollTop:0},1000); //обязательно документ точка боди, иначе не работает
+		
+		});
+		//мерцание объекта
+		function mirrocle(){
+			$("#p_fade").fadeOut(500);
+			$("#p_fade").fadeIn(500);
+		}
+		setInterval(mirrocle,1000);
+		//перемещение кнопок из одного дива в дрегой
+		$('button').click(function(e){
+		if($(this).parent().attr("id")==="areal")
+		{var currButt = $(this).detach();
+			currButt.appendTo($('#box'));
+		}else
+		{var currButt = $(this).detach();
+			currButt.appendTo($('#box1'));
+		}
+		
+		})
+//пользовательская подсказка	
+	$('#link_1').mouseover (function(e){
+		$('#container').css({'display':'block','opacity':0}).animate({'opacity':1},1000);	
+	});
+	
+	
+	$('#link_1').mousemove (function(e){
+	
+	});
+	
+	
+	$('#link_1').mouseout (function(e){
+	
+	});
+	//парсинг ексель
+	
+	
+		
+		</script>
+		
+	</body>
+	<footer>
+	</footer>
+	</html>

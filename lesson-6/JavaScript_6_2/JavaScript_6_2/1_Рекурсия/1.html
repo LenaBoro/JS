@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Пример Расчёт заданного числа Фибоначчи с использованием рекурсии
+	function fibRec(n){
+		if( n === 1 || n === 2 ) {
+			return 1;
+		} else {
+			return fibRec(n-1) + fibRec(n-2);
+		}
+	}
+	
+	console.log(fibRec(5));
+</script>
+</body>
+<footer></footer>
+</html>

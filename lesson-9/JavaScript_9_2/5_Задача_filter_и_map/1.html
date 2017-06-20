@@ -1,0 +1,24 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	//Задача: Дан массив со строками. Оставьте в нем только те строки, длина 
+	//которых больше 5-ти символов.
+	var mas = ["asdfg", "qwerty"].filter(function(el){
+		return el.length > 5;
+	});
+	console.log(mas);
+	//Задача: Дан массив с числами. Оставьте в нем только положительные числа. 
+	//Затем извлеките квадратный корень из этих чисел 
+	var arr = [4,9,-4].filter(function(el){
+		return el > 0;
+	}).map(function(el){
+		return Math.sqrt(el);
+	});
+	console.log(arr);
+</script>
+</body>
+<footer></footer>
+</html>

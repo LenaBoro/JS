@@ -27,21 +27,23 @@ Cвойства объекта:
 		//конструктор корзины
 		function Basket(){
 			this.arr=[];
+			this.price=0;
 			this.count=0;
 		}
-		Basket.prototype.addTovar = function(){
+		Basket.prototype.addTovar = function(Tovar){
 			this.arr.push(Tovar);
 			this.count ++;
-			this.price+=this.price;
+			this.price+=Tovar.price;
 			}
+			
 		var tovar = new Tovar("ski",200);
 		var tovar_1 = new Tovar("skis",200);
 		//console.log(tovar);
 		//console.log(tovar_1);
 		var basket = new Basket();
 		
-			basket.addTovar();
-			basket.addTovar();
+			basket.addTovar(tovar);
+			basket.addTovar(tovar_1);
 			console.log(basket);	
 		
 			

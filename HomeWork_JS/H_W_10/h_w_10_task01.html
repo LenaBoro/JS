@@ -22,24 +22,30 @@
 	function Tovar(name,price){
 		this.name=name;
 		this.price=price;
-	}
+	};
 	function BasketTovar(){
 		//приватные переменные 
 		var arrTovar =[];
 		var price=0;
 		var count=0;
-	 this.addTovar=function(){
+		this.addTovar = function(Tovar){
 			arrTovar.push(this.name)//добавление товара
 			count++;//кол-во товара
-			price+=this.price;//сумма товара
+			price+=Tovar.price;//сумма товара
 		}
-	}
+		this.sumPrice=function(){
+			return price;
+		}
+		this.countTovar=function(){
+			return count;
+		}
+	};
 	var tovar = new Tovar("ski",200);
-		console.log(tovar);
-	var basket = new BasketTovar();
-	var addTovar = basket.addTovar;
+	//	console.log(tovar);
 	
-	console.log(addTovar);
+	var basket = new BasketTovar();
+	basket.addTovar(tovar);
+	console.log(basket.sumPrice());
 
 	
 		</script>

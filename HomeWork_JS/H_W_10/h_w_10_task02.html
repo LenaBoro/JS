@@ -24,30 +24,31 @@
 		lastname:"Bog",
 		interests:["flies","Water lilies","Mosquitoes","Toads"] -->
 				<script>
-		function Human(){
-			this.name = "Frog";
-			this.lastname = "Bof";
-			this.age = 20;
-			this.sex = "men";
-			this.interest = ["flies","Water lilies","Mosquitoes","Toads"];
-		}
-		
-		function Student(){
-			Human.apply(this);
-			}
+		function Human(name,lastname,age,gender,interest){
+			this.name = name;
+			this.lastname = lastname;
+			this.age = age;
+			this.gender = gender;
+			this.interest = [] ;
+			this.toString = function(){
+				return "Name: "+this.name+ "." + "Lastname:"+this.lastname+"." +"Age: "+ this.age+"." +"Gender: "+ this.gender +"." + "Interest: "+this.interest+"." ;
+			};
+		};
+		function Student(name,lastname,age,gender,interest,institute){
+			Human.call(this, name,lastname,age,gender,interest);
+			this.institute= "study at the university";
+			this.toString=function(){
+				return "Stydent:"+this.name+ "." + "Lastname:"+this.lastname+"." +"Age: "+ this.age+"." +"Gender: "+ this.gender +"." + "Interest: "+this.interest+"." + this.institute; 
+			};
+		};
 
-	var student=new Student()
-	//добавляем свойство институт
-		student.institute="Обучается в ИТМО"
+	var human = new Human("Oli","Xari","20","men",["om","deva primal","adolf"]);		
+	var student = new Student("Oli","Xari","20","men",["om","deva primal","adolf"],"study at the university");
 	
-	function print(){
-		console.log(this.name + " " + this.lastname + ". " + this.age +". "+ "Interests:"+this.interest + "." + this.institute);	
-	}
-	student.print = print;
-	student.print()
+	console.log(student.toString())
+	
 	
 
-	//преобразовать в строчку свойства студента
 	
 				</script>
 	</body>

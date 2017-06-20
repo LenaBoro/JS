@@ -1,0 +1,123 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html,body{
+	height:100%;
+}
+
+.wrapper{
+	position:relative;
+	min-height:100%;
+}
+
+.content{
+	padding-bottom:150px;
+	
+}
+
+#air{
+	height:30px;
+	width:120px;
+	background-color:green;
+}
+#ostrov{
+	height:100px;
+	width:200px;
+	background-color:yellow;
+	position:absolute;
+	top:600px;
+	left:300px;
+}
+#start-game{
+	height:150px;
+	width: 500px;
+    background-color:cornflowerblue;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    text-align: center;
+	color:white;
+}
+#start{
+	background-color:#a0e436;
+	border:white;
+	box-shadow:1px -1px 2px 0px cornflowerblue;
+	color:cornflowerblue;
+	border-radius: 2px;
+	margin:110px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+	font-size: 27px;
+	
+}
+
+#about{
+	height:50px;
+	width:50px;
+	background-color:orange;
+	display:none;
+}
+#gameOver{
+	height: 150px;
+    width: 281px;
+    background-color: #dcedc8;
+    display: none;
+    position: absolute;
+    left: 40%;
+    top: 21%;
+    text-align: center;
+    padding: 30px;
+   
+}
+#fieldGAme{
+	display:none;
+	border-bottom:solid rgb(107, 163, 255);
+	width:600 px;
+	height:985px;
+	position:absolute;
+	left: 20%;
+    
+}
+#container{
+	width:600;
+	height:785;
+	position:relative;
+	
+}
+footer{
+	position:absolute;
+	height:150px;
+	width:100%;
+	background: aliceblue;
+	bottom:0;
+	left:0;
+}
+#status-info{
+	
+	height:100%;
+	width:100%;
+	color:navy;
+}
+#peopleLeft{
+	height:20px;
+	width:150px;	
+	float:left;
+	font-size:25px;
+	margin-left:20px;
+	}
+#hit{
+	height:20px;
+	width:150px;
+	float:left;
+    font-size:25px;
+	}
+#missia{
+	height:20px;
+	width:150px;
+	float:left;
+    font-size:25px;
+}

@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+	<div id="big" style="height:300px; width:300px; background-color:aqua;position:relative;">
+		<div id="small" style=" height:50px; width:50px; position:absolute; background-color:yellow;left:0px;top:0px;"></div>	
+	</div>
+	<script>
+			
+			document.addEventListener("keydown", function(e){
+					
+					if(e.keyCode===37){
+					small.style.left=(parseInt(small.style.left)-5)+"px";}
+
+					else if (e.keyCode===39){
+					small.style.left=(parseInt(small.style.left)+5)+"px";}
+
+					else if (e.keyCode===38){
+					small.style.top=(parseInt(small.style.top)-5)+"px";}
+
+					else if (e.keyCode===40){
+					small.style.top=(parseInt(small.style.top)+5)+"px";}
+			 
+		
+			},false);
+	
+	</script>
+</body>
+<footer></footer>
+</html>

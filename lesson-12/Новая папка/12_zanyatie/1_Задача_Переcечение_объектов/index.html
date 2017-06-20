@@ -1,0 +1,60 @@
+<html>
+<header>
+</header>
+<body>
+	<div id = "gameplace" style="background-color:rgb(225,225,225);height:200px;width:200px;position:relative;">
+		<div id = "box" style="background-color:red;height:20px;width:20px;position:absolute;left:0px;top:0px;"></div>
+		<div id = "box2" style="background-color:green;height:20px;width:20px;position:absolute;left:150px;top:150px;"></div>
+	</div>
+	<script>
+		var shape = document.getElementById('box');
+		document.addEventListener('keydown', function(event){
+			if (event.keyCode === 37){
+				//Нажатие влево
+				shape.style.left = (parseInt(shape.style.left) - 5) + 'px';
+				checkBoxs();
+			} else if (event.keyCode === 39) {
+				//Нажатие вправо
+				shape.style.left = (parseInt(shape.style.left) + 5) + 'px';
+				checkBoxs();
+			} else if (event.keyCode === 40) {
+				//Нажатие вниз
+				shape.style.top = (parseInt(shape.style.top) + 5) + 'px';
+				checkBoxs();
+			} else if (event.keyCode === 38) {
+				//Нажатие вверх
+				shape.style.top = (parseInt(shape.style.top) - 5) + 'px';
+				checkBoxs();
+			}			
+			console.log(event.keyCode);
+		});
+		
+		function intersection(box1,box2){
+			//Проверяем пересекаются ли по Оси
+			var x1_left = parseInt(box1.style.left);
+			var x1_right = x1_left + parseInt(box1.style.width);
+			var x2_left = parseInt(box2.style.left);
+			var x2_right = x2_left + parseInt(box2.style.width);
+			var flag1 = x1_left <= x2_left && x2_left <= x1_right ||
+				x1_left <= x2_right && x2_right <= x1_right;
+			var y1_left = parseInt(box1.style.top);
+			var y1_right = y1_left + parseInt(box1.style.height);
+			var y2_left = parseInt(box2.style.top);
+			var y2_right = y2_left + parseInt(box2.style.height);
+			var flag2 = y1_left <= y2_left && y2_left <= y1_right ||
+				y1_left <= y2_right && y2_right <= y1_right;
+			return flag1 && flag2;
+		}
+		
+		function checkBoxs(){
+			if(intersection(box, box2)){
+				shape.style.backgroundColor = "green";
+			} else {
+				shape.style.backgroundColor = "red";
+			}
+		} 
+	</script>
+</body>
+<footer>
+</footer>
+</html>

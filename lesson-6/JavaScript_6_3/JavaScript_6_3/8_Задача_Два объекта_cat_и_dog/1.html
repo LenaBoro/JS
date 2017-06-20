@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Пример №2 Доступ к объекту из функции через this
+	var cat = {
+		name: "Барсик",
+		age: 3,
+		keyWord: "Мяу"
+	}
+	
+	var dog = {
+		name: "Балбес",
+		age: 3,
+		keyWord: "Гав"
+	}
+	
+	function logHello(){
+			console.log(this.keyWord + "! Меня зовут " + this.name);
+	}
+	
+	cat.hello = logHello;
+	dog.hello = logHello;
+	
+		
+	cat.hello();
+	dog.hello();
+	logHello();	
+</script>
+</body>
+<footer></footer>
+</html>

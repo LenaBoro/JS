@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Задача Игровое поле в числа-->
+	
+</head>
+<body>
+	<div id="container"></div>
+	
+		<script>
+while(true){
+		var a = prompt("Vvedite math vurajenie");
+		
+		try {
+		var c = eval(a);
+		if(isNaN(c)){
+		throw new Error("nan");}
+		else if( !isFinity(c)){
+		throw new Error("infinity")
+		}
+		console.log(c);
+		break;
+		}
+		catch(e){
+		alert(e.name+" "+e.massage +" "+ e.stack)
+		};
+		
+		</script>
+</body>
+<footer>

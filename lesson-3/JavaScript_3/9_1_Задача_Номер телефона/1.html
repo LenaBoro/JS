@@ -1,0 +1,20 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	//Задача проверить номер телефона шаблону
+	var str = prompt("Введите номер телеона в формате: X (XXX) XXX-XX-XX","");
+	
+	var regExp = /\d{1} \(\d{3}\) \d{3}-\d{2}-\d{2}/;
+	if (regExp.test(str))
+	{
+		alert("Номер телеона введён правильно!");
+	} else {
+		alert("Номер телеона введён неправильно!");
+	}	
+</script>
+</body>
+<footer></footer>
+</html>

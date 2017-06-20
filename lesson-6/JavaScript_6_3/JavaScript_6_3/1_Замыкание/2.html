@@ -1,0 +1,20 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	//Пример Замыкание
+	function outName(name, lastname){
+		return function(){
+			return name + " " + lastname;
+		}
+	}
+	
+	var getName = outName("Иван", "Иванов");
+	
+	alert(getName());
+</script>
+</body>
+<footer></footer>
+</html>

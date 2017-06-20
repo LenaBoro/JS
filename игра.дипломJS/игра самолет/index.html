@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="jquery-3.2.1.min.js"></script> 	
+		<script src="underscore.js"></script>
+		<script src="js.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="utf-8">
+	</head>
+		<body>
+		<div class="wrapper">
+		<div class="contetnt">
+			
+			<!--  ----------------        -->
+			<div id="start-game">
+				<h1>Hello!</h1>
+				<h2>Use space to drop people on the island</h2>
+				<button id="start">Start</button>
+			</div>
+			<!--  ----------------        -->
+			<div id="gameOver">
+			   <h1>Game over!</h1>
+			   <p>try agein</p>
+			</div>
+			
+			<div id="container" style =" width:"600;" height:"785">
+				<canvas id="fieldGAme"></canvas>
+			</div>
+			<!--  ----------------        -->	
+					<audio id="fon"> 
+						<source src="fon.mp3"></source>
+					</audio>
+					<audio id="audioP"> 
+						<source src="Sound.mp3"></source>
+					</audio>
+				<!--  ----------------        -->	
+		
+				<footer id="footer">
+			
+			<div id="status-info">
+					<div id="peopleLeft"></div>
+					<div id="hit"></div>
+					<div id="missia"></div>			
+			</div>		
+			</footer>
+		</div>
+		</div>
+			
+		</body>
+</html>

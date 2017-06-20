@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<header>
+	<meta charset="utf-8">
+</header>
+<body>
+	<script>
+		//симулятор боя
+		function Fighter(name,a_min,a_max,def, healf){
+		this.name=name;
+		this.a_min=a_min;
+		this.a_max=a_max;
+		this.def=def;
+		this.healf=healf;
+		//прототипы
+			Fighter.prototype.attack=function(){
+				return Math.floor(Math.random()*(this.a_max-this.a_min)+this.a_min);
+			}
+		Fighter.prototype.defence=function(att){
+		var demag = att - this.def;
+			if(demag>0){
+			this.healg-=demag;
+			}
+		}
+		function FightersManager(){
+		this.player1=new Fighter("Rokk",10,10,50,100);
+		this.player2= new Fighter("Drago",10,10,50,100);
+	FightersManager.prototype.figth=function(){
+	this.player1.defence(this.player2.attack());
+	if (this.player1.healf<=0){
+	console.log("vvin"+this.player2.name);
+	return;
+	}
+	this.player2.defence(this.player1.attack());
+		if (this.player2.healf<=0){
+		console.log("vvin"+this.player1.name);
+		return;
+	}
+	console.log(this.player1.name +"Heal"+this.player1.healf)
+	console.log(this.player2.name +"Heal"+this.player2.healf)
+	var that=this;
+	setTimeout( function(){
+	that.fight()
+	},2000);
+				}
+			}	
+		var fM = new FightersManager();
+		fM.fight()
+		
+		
+	</script>
+	</body>
+</html>

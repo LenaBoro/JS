@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Задача Написать функцию сравнения двух чисел для метода массивов sort
+	function fn(num1,num2){
+		if(num1 > num2){
+			return 1;
+		} else if (num1 < num2) {
+			return -1;
+		} else {
+			return 0;
+		}
+	}
+
+	var mass = [1, 2, 3, 11, 22, 33];
+	
+	mass.sort(fn);
+	
+	console.log(mass);
+</script>
+</body>
+<footer></footer>
+</html>

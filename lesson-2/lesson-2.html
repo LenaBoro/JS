@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>lesson-2</title>
+</head>
+<body>
+	<script>
+	//задача на расчет зп 
+/*	var oklad = prompt('Введите оклад');
+	var fix = 13/ 100;
+	var month_work_day = prompt('Введите кол-во рабочих дней в месяц');
+	
+	var work_day = prompt('Введите кол-во отработанных дней в месяц');
+	var my_money=((oklad * work_day)/month_work_day);
+	var nalog = my_money * fix;
+	var profit = my_money-nalog;
+	
+		alert("Размер зп:" + profit);
+*/
+//Задача 2------------выводим текст меню---------
+/*	var x = prompt('Выбирете язык приветсвия\n 1-Русский\n 2-Немецкий\n 3-Английский');		
+	
+	switch (x){
+		case '1':alert('Привет');
+		break;
+		
+		case '2':alert('saddssa');
+		break;
+		
+		case '3':alert('dfsdf');
+		break;
+		
+		default:
+		alert('default');
+	}
+	*/
+	
+	//Задача 4--сумма от 1 до100 ---------
+	/*	var i = 1;
+		var a = 0;
+			while (i <= 100)
+			
+			{var a = a + i; i++;}
+		
+		document.write(a);
+		*/
+	//задача 5 -------tаблица в js
+	var i=0;
+		var	tableHTML = "<table><tr><th>N</th><th>N1</th></tr>";
+	
+		while(i<=5)
+		{	
+		if (i%2)
+			{tableHTML+='<tr style="background-color:grey;">';}
+		else{tableHTML+='<tr style="background-color:green;">';}
+			
+			tableHTML+="<th>" + i + "</th><th>" + i*2 + "</th>";i++;
+			}
+			document.write(tableHTML+="</table>"); 
+				
+				
+	
+
+		
+		</script>
+</body>
+</html>
+
+
+

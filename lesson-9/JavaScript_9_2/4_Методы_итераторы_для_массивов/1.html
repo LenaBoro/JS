@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	//Пример Методы forEach, filter, every и some, reduce 
+	[2,3,4].forEach(function(el, idx, arr) {
+		document.write('arr['+idx+'] = '+el+' в ['+arr+'] <br>');
+	});
+	
+	var mas = [-1,-2,3,4].filter(function(el, idx, arr){
+		return el<0;
+	});
+	console.log(mas);
+	
+	var mas2 = [-1,-2,3,4].map(function(el, idx, arr) { 
+		return el * el; 
+	});
+	console.log(mas2);
+	
+	var result = [-1,-2,-3,-4].every(function(el, idx, arr) { 
+		return el < 0; 
+	});
+	console.log(result);
+	
+	var result2 = [-1,2,3,4].some(function(el, idx, arr) { 
+		return el < 0; 
+	});
+	console.log(result2);
+	
+	var result3 = [1, 2, 3, 4].reduce(function(prev, curr, idx, arr) {
+		return prev + curr;
+	});
+	console.log(result3);
+</script>
+</body>
+<footer></footer>
+</html>

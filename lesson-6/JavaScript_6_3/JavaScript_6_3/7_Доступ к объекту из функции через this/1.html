@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Пример №1 Доступ к объекту из функции через this
+	var cat = {
+		name: "Барсик",
+		age: 3,
+		mew: function (){
+			console.log("Мяу! Меня зовут " + this.name);
+		}	
+	}
+	
+	cat.mew();	
+</script>
+</body>
+<footer></footer>
+</html>

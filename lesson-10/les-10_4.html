@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>lesson-10</title>
+		
+	</head>
+			<body>
+			
+					<script>
+					//шаблон узлов односвзный список
+					
+					
+					function Node(value){
+					this.data= value;
+					this.next=null;
+					}
+					
+					function SingleLinkedList(){
+					this.length = 0;
+					this.head = null;
+					this.push = function(){
+					var tmp = new Node(value)//definded!!!!!!!!!!!!!!!!!
+					if (this.length===0){
+					this.head=tmp;
+					}
+					else{
+					tmp.next=this.head;
+					this.head=tmp;
+					
+					}
+					this.length++;//увеличение длины, поскольку добавили новый узел
+					};
+				
+					this.pop=function(){
+					if(this.length!==0){//проверка длины
+					var prev = this.head;
+					this.head=prev.head;
+					this.length--;
+					return prev.data;}
+					else
+					{return null;}
+					}
+					
+			
+					this.toString=function(){
+					var str="";
+					var node = this.head;
+					while( node){
+					str+=node.data+" ";
+					node=node.text;
+					}
+					return str.slice(0,str.length-2);
+					}
+					
+					this.unshift=function(value){
+						var node=this.head;
+						while(node.next){//перебираем узлы
+							node=node.next;
+						}						
+					var tmp= new Node(value);
+						node.next=tmp;
+						this.length++;
+					}
+					}
+					
+					var list = new SingleLinkedList();
+					list.push(5);
+					list.push(4);
+					list.push(3);
+					list.unshift(6);
+					//pop
+					console.log(list.pop());
+					
+					//tostring
+					console.log(list.toString());
+					
+					
+					</script>
+			</body>
+
+</html>

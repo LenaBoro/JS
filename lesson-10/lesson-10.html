@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>lesson-10</title>
+		
+	</head>
+			<body>
+			<div id="box" style="width:30px; height:30px;"></div>
+					<script>
+					// задача 1
+					function IntegerIterator( _from, _to){		
+					this._from =_from;
+					this._to =_to; 
+					var curr=_from;
+									
+					this.iterate = function(){
+					if(this.curr === this._to){
+					return this.curr;}
+					else if(this._from < this._to){
+						return this.curr++;}
+					else if(this._from > this._to){
+						return this.curr--;}
+						}
+						}	
+				//2 поколение объекта унаследовал и добавил свое поведение
+				function IntegerIteratorSecond( _from, _to){	
+					IntegerIterator.call(this, _from, _to);
+					
+					this.iterate_2 = function(){
+						if(this.curr === this._to){
+						var temp = this._to;
+						this._to = this._from;
+						this._from=temp;
+						}
+						return this.iterate();
+						}
+						}
+
+				/* 
+					var redChannel = new IntegerIterator(0,255);
+					var blueChannel = new IntegerIterator(255,0);
+					var greenChannel = new IntegerIterator(0,255);
+					function style_div(){
+					box.style.backgroundColor="rgb("+redChannel.iterate()+","+ blueChannel.iterate()+","+greenChannel.iterate()+")"; }
+					
+					setInterval(style_div,10)
+					
+				var iterator= new IntegerIterator(0,5);
+					
+					console.log(iterator.iterate());
+					console.log(iterator.iterate());
+					console.log(iterator.iterate());
+					console.log(iterator.iterate());
+					console.log(iterator.iterate()); */
+					//задача 2 второе поколение итератора+функция
+					
+					
+					
+				/*	var redChannel = new IntegerIteratorSecond(0,255);
+					var blueChannel = new IntegerIteratorSecond(255,0);
+					var greenChannel = new IntegerIteratorSecond(0,255);
+					
+					function style_div(){
+					box.style.backgroundColor="rgb("+redChannel.iterate()+","+ blueChannel.iterate()+","+greenChannel.iterate()+")";
+					}
+					
+					setInterval(style_div,10)
+		*/			
+					var iterator= new IntegerIterator(0,5);
+					
+					console.log(iterator.iterate());
+					console.log(iterator.iterate());
+					console.log(iterator.iterate());
+					console.log(iterator.iterate());
+					console.log(iterator.iterate());
+				
+					</script>
+			</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Запрашиваем логин
+	var login = prompt("Введите логин!", '');
+	var message;
+	var passWord;
+	
+	switch (login){
+		case 'Админ':
+			//Запрашиваем пароль
+			passWord = prompt("Введите пароль!", '');
+			message = (passWord == 'Админ') ? "Добро пожаловать!" : "Я вас не знаю!";
+			break;
+		case 'root':
+			passWord = prompt("Введите пароль!", '');  
+			message = (passWord == 'root') ? "Добро пожаловать!" : "Я вас не знаю!";
+			break;
+		default:
+			message = "Я вас не знаю!";
+	}
+
+	alert(message);		
+</script>
+</body>
+<footer></footer>
+</html>

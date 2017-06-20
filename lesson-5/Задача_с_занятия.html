@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var summ = function(n, m) {
+				var result = 0;
+				for (var i = n; i <= m; i++) {
+					result += i;
+				};
+				return result;
+			};
+			
+
+			
+			var content = {
+				aqua: 85,
+				carbon: 10,
+				gas: {
+					oxygen: 3,
+					nirtogen: 5
+				},
+				sulfur: 3
+			};
+			
+			var objPrint = function(object, level = 0) {
+				var result = '';
+				if (typeof object === 'object') {
+					for (var key in object) {
+						if (typeof object[key] === 'object') {
+							result += `${Array(level+1).join('\t')}${key}:\n`
+							result += objPrint(object[key], level + 1);
+						} else {
+							result += `${Array(level+1).join('\t')}${key}: ${object[key]}\n`
+						};
+					};
+					
+					return result;
+					
+				} else {
+				
+					console.log('Не объект.');
+				
+				};
+			};
+		</script>
+	</body>
+</html>

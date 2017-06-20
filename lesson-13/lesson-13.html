@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src=″jquery-3.2.1.min.js″></script>
+		</head>
+	<body>
+<!-- 		<p>Текст</p>
+<table>
+	<tr>
+		<td>№</td>
+		<td>Name</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>First</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Second</td>
+	</tr>
+
+</table> -->
+	<!-- <button id="b1"> Button</button>-->	
+
+	<!-- <form>	
+		<label>Max length</label>
+		<textarea id="t_a" style="maxlength:15;"></textarea>
+		<span id="span">15 sim</span>
+	</form> -->
+	
+	
+			<script>
+	/*	$( function(){
+			$(document.p).contextmenu(function (){
+				return false;
+			});
+		)};
+		*/
+		//задача 2
+		
+		/*$(function(){
+		$('tr')
+			.filter(':odd')
+			.css('background-color','green')
+			.end()
+			.filter(':even')
+			.css('background-color','grey')
+		
+		});
+		*/
+		//задача 3
+	// Задача 4
+/*	$(function(){
+		$('#b1').one('click',function(e){
+			this.innerText='Push';
+		})
+	
+	});
+	*/
+	
+	//задача 5
+	/*var maxLength=15;
+	$(function(){
+		$('textarea').keyup(function(){
+			var mL=parseInt($(this).attr('maxlength'));
+			var currL=$(this).val().length;
+			$('#span').text.
+		
+		});
+	});
+	*/
+	
+	//7 фильтр по картинкам по размеру
+	$('img').filter(function(ind,el){
+		return $(el).height()>100 && $(el).width()>100;
+	}).toArray();
+	
+	
+			</script>
+	</body>
+<footer></footer>
+</html>
+
+<!--отмена действия браузера пример 1 перезагрузки страницы на новый адрес -->

@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+	//Пример задача найти мин и макс значение в массиве
+	var a = [2,3,7,13,5,0,20];
+	//Переменные для хранения мин и макс значения
+	var min = a[0];
+	var max = a[0];
+	
+	for(var i = 1; i < a.length; i++)
+	{
+		if (a[i] > max)
+		{
+			max = a[i];
+		}
+		if (a[i] < min)
+		{
+			min = a[i];
+		}
+	}
+
+	console.log('Исходный массив: ' + a.toString());
+	console.log('Минимальное значение: ' + min);
+	console.log('Максимальное значение: ' + max);
+</script>
+</body>
+<footer></footer>
+</html>

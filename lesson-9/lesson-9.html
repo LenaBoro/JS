@@ -1,0 +1,80 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<style>
+	td{
+		text-align:center;
+	}
+</style>
+	</head>
+	<body>
+	<table border="solid black" cellspacing="0" >
+	<caption>Калькулятор</caption>
+	<tbody>
+		<tr>
+			<input>
+		</tr>
+		<tr>
+			<td>C</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>/</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>*</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>.</td>
+			<td>=</td>
+			<td>+</td>
+		</tr>
+	</tbody>
+	</table>
+		<script>
+			//шаблоны проектирования be heaver шаблон поведения 1 крупный наверху
+		//вернет теги , которые имеют название table
+
+			var table =document.getElementsByTagName('table')[0];
+	 table.addEventListener("click", function(e){
+	 //удостоверяемся что ячейка, а не инпут
+	 if(e.target.tagName === "TD")
+		{ var content = e.target.innerText;
+		
+			//контент вставляем в инпут через value
+			
+	<!-- 	var input =document.getElementsByTagName('input')[0];			
+			if(content === "="){
+				var result = eval(input.value);
+				input.value = result;
+				}
+				else if( content === "C"){
+					input.value="";
+				}else {
+				input.value+=content;
+			}
+		}	 
+	 }, false);
+			
+		
+	
+	
+		</script>
+	</body>
+	<footer></footer>
+</html>

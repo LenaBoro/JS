@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+<script src="myUtils.js"></script>
+<script type="text/javascript">
+	//Задача Библиотека методов
+	var mass = [1,2,3,4,5,6];
+	console.log(mass.join(","));
+	myUtils.remove(mass, 5);
+	console.log(mass.join(","));
+	
+	var str = "a";
+	var new_str = myUtils.repeat(str,3);
+	console.log(new_str);
+	
+	var array = [
+		{name:"sasha", age:18},
+		{name:"ivan", age:21},
+		{name:"petr", age:30},
+	];
+	console.log(myUtils.pluck(array, "name").join(","));
+	
+</script>
+</body>
+<footer></footer>
+</html>

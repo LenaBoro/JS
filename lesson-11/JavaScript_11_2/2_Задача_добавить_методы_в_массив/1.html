@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		//Задача добавить в массив
+		Array.prototype.remove = function(index){
+			var a = this.slice(0);
+			a.splice(index,1);
+			return a;
+		}
+		
+		var a = [1,2,3,4,5];
+		var b = a.remove(0);
+		console.log(a);
+		console.log(b);
+		
+		Array.prototype.min = function(){
+			var min = this[0];
+			for(var i = 1; i < this.length; i++){
+				if(min > this[i]){
+					min = this[i];
+				}
+			}
+			return min;
+		}
+		
+		Array.prototype.average = function(){
+			var sum = 0;
+			for(var i = 0; i < this.length; i++){
+				sum += this[i];
+			}
+			return sum/this.length;
+		}
+		console.log(a.min());
+		console.log(a.average());
+	</script>
+</body>
+<footer></footer>
+</html>
