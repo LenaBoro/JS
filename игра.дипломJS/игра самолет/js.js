@@ -159,6 +159,7 @@ $(document).ready(function(){
 			run = false;
 			level = 0;
 			$('#gameOver').show();	
+			$('#fieldGAme').hide();
 		}	
 	}
 	setInterval(countPeople,80)
