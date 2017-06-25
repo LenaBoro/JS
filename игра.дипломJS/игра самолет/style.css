@@ -101,23 +101,32 @@ footer{
 	height:100%;
 	width:100%;
 	color:navy;
+	display:none;
 }
+#level{
+	height:20px;
+	width:100px;	
+	float:left;
+	font-size:25px;
+	margin-left:10px;
+	}
 #peopleLeft{
 	height:20px;
 	width:150px;	
 	float:left;
 	font-size:25px;
-	margin-left:20px;
-	}
+	margin-left:25px;
+	margin-right:25px;
+}
 #hit{
 	height:20px;
-	width:150px;
+	width:100px;
 	float:left;
     font-size:25px;
 	}
 #missia{
 	height:20px;
-	width:150px;
+	width:100px;
 	float:left;
     font-size:25px;
 }

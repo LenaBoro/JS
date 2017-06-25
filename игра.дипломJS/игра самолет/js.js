@@ -7,7 +7,7 @@ $(document).ready(function(){
 	plane  = new Image(),
 	people = [],
 	//5 человеков
-	peopleLeft = 100,
+	peopleLeft = 10,
 	level = 0,
 	//попадение на остров
 	hit = 0,
@@ -28,7 +28,7 @@ $(document).ready(function(){
 				//0
 		{
 			missia:1,
-			peopleLeft: 10
+			peopleLeft:10
 		},
 				//1
 		{
@@ -154,7 +154,6 @@ $(document).ready(function(){
 			}else{
 				updateInfo();	
 			}	
-			$('#gameOver').show()
 		}
 		if(peopleLeft == 0 && people.length == 0 && run){
 			run = false;
@@ -167,18 +166,23 @@ $(document).ready(function(){
 	
 	//сообзение о выигрыше
 	function winGame(){
+		$('#start-game h1').text('You Win!');
+		$('#start-game h2').text(' ');
+		$('#start').hide();
 		$('#start-game').show();
-		$('start-game').text('<h1>You Win!</h1>');
-		$('start-game').text('<h2>Try again?</h2>');
+		$('#fieldGAme').hide();
 	}
 	
 //обновление инфы
     function updateInfo(){
-		$('#gameOver').text('Good job!');
-		
+		level++;
+		hit=0;
+		peopleLeft=levels[level].peopleLeft;
+		run = true;
 	}	
 
 	function updateFooter(){
+		$('#level').text('Level:' + level);
 		$('#peopleLeft').text('Left people:' + peopleLeft);
 		$('#hit').text('Hit: ' + hit);
 		$('#missia').text('Missia: ' + levels[level].missia);	
@@ -208,12 +212,8 @@ $(document).ready(function(){
 	
 	//-------------старт игры событие-----------------------------------------
 	$('#start').on('click',function(){
-		$('status-info').show();
-		level++;
-		peopleLeft = levels[level].peopleLeft;
-		hit = 0;
-	    run = true;
-		$('#fieldGAme').show();
+		$('#status-info').show();
+		$('#fieldGAme').show();    
 		$('#start-game').hide();
 	});
 	
